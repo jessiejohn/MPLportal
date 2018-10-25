@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link href="project.css" rel="stylesheet">
+	<link href="project2.html" rel="stylesheet">
+	<title>Sitelist Filters</title>
+
+</head>
+
+<body>
+
+	<div id = "filter"> Filters <br>
+
+		<form action="Vertical">
+		<select name="Vertical" multiple>
+			<option>News</option>
+    		<option>Lifestyle </option>
+    		<option>Finance</option>
+    		<option>Travel</option>
+    		<option>Business</option>
+		</select>
+
+		<form action="Country">
+		<select name="Country" multiple>
+			<option>USA</option>
+    		<option>Canada </option>
+    		<option>UK</option>
+    		<option>Singapore</option>
+    		<option>Australia</option>
+		</select>
+
+		<form action="CPM">
+		<select name="CPM" multiple>
+			<option> < $5 </option>
+    		<option> $5.01 - $10 </option>
+    		<option> $10.01 - $11 </option>
+    		<option> > $11 </option>
+		</select> 
+
+		<form action="Accepts alcohol">
+		<select name="Accepts alcohol?" multiple>
+			<option>Yes</option>
+    		<option>No </option>
+    		<option>UK</option>
+		</select>
+
+		<form action="Accepts gambling">
+		<select name="Accepts gambling?" multiple>
+			<option>Yes</option>
+    		<option>No </option>
+    		<option>UK</option>
+		</select>
+
+
+		<form action="Product Format">
+		<select name="Product Format" multiple>
+			<option>In-Article</option>
+    		<option>Vertical </option>
+    		<option>Unmissable</option>
+    		<option>In-Stream</option>
+    		<option>In-Page</option>
+		</select>
+
+		<form action="Site Language">
+		<select name="Site Language" multiple>
+			<option>English</option>
+    		<option>Japnese </option>
+    		<option>Mandrain</option>
+    		<option>French</option>
+    		<option>German</option>
+		</select>
+
+		<form action="Whitelisted for RTB">
+		<select name="Whitelisted for RTB?" multiple>
+			<option>Yes</option>
+    		<option>No </option>
+		</select>
+
+		<form action="Required BD Approval">
+		<select name="Required BD Approval?" multiple>
+			<option>Yes</option>
+    		<option>No </option>
+		</select>
+
+		<form action="Exchanges">
+		<select name="Exchanges" multiple>
+			<option>Index Exchange</option>
+    		<option>Rubicon </option>
+    		<option>AppNexus</option>
+    		<option> BidSwitch </option>
+		</select> <br>
+
+		<button id="filter" class="btn btn-secondary">Filter</button> <br>
+
+		<br>
+		<button id="Download" class="btn btn-secondary">Download Current View</button> <br>
+
+		<br>
+
+		<form action="/action_page.php">
+  		Upload file <input type="file" name="img" multiple>
+  		<input type="submit">
+		</form>
+
+	</div>
+
+	<script src="project.js"></script>
+ 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+
