@@ -28,7 +28,7 @@
 
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   		<!-- Brand -->
-    	<a href="#" class="pull-left"><img src="https://unruly.co/wp-content/themes/Unruly/assets/gfx/layout/logo.png"></a> 
+    	<a href="homepage.html" class="pull-left"><img src="https://unruly.co/wp-content/themes/Unruly/assets/gfx/layout/logo.png"></a> 
   		<!-- Links -->
   		<ul class="navbar-nav">
     		<li class="nav-item">
@@ -62,42 +62,94 @@
         		<input type="date" id="date" value="yyyy-MM-dd" min="2010-01-01" max="2018-12-31" />
     		</div> <br>
 
-			<div class="dropdown">
-    			<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> 
-    				Staus
-    			</button>
-    		
-    			<div class="dropdown-menu">
-	     			<a class="dropdown-item" href="#">Active</a>
-				    <a class="dropdown-item" href="#">In Process</a>
-				    <a class="dropdown-item" href="#">On Hold</a>
-				    <a class="dropdown-item" href="#">Lost</a>
-				    <a class="dropdown-item" href="#">Site Discontinued</a>
-    			</div> <br> 
-    		</div>
-			
+			Status:<br> 
+			<select>
+	  			<option>Active</option>
+	  			<option>In Process</option>
+	  			<option>On Hold</option>
+	  			<option>Lost</option>
+	  			<option>Site Discontinued</option>
+
+			</select><br>
+			<br>			
 			Site Name:     <input type="text" name="fname"> <br>
+			<br>
 			Site ID:     	<input type="text" name="fname"> <br>
+			<br>
 			UUID:     	<input type="text" name="fname"> <br>
+			<br>
 			Site URL:     <input type="text" name="fname"> <br>
+			<br>
 			Internal Description:     <input type="text" name="fname"> <br>
+			<br>
 			Parent Network:     <input type="text" name="fname"> <br>
+			<br>
 			Account Manager:     <input type="text" name="fname"> <br>
+			<br>
 			Contact Name:     <input type="text" name="fname"> <br>
+			<br>
 			Contact Email:     <input type="text" name="fname"> <br>
+			<br>
 			Currency:     <input type="text" name="fname"> <br>
+			<br>
 			[CPM] UnrulyX Out-Stream:     <input type="text" name="fname"> <br>
+			<br>
 			[CPM] UnrulyX Mobile Out-Stream:     <input type="text" name="fname"> <br>
+			<br>
 			[CPM] UnrulyX In-Stream:     <input type="text" name="fname"> <br>
+			<br>
 			[CPM] UnrulyX Mobile In-Stream:     <input type="text" name="fname"> <br>
+			<br>
 			[CPM] In-Article (direct):     <input type="text" name="fname"> <br>
+			<br>
 			[CPM] In-Article Mobile (direct):     <input type="text" name="fname"> <br>
+			<br>
 			[CPM] Vertical Video (direct):     <input type="text" name="fname"> <br>
+			<br>
 			[CPM] Unmissable (direct):     <input type="text" name="fname"> <br>
-			Gender:     <input type="text" name="fname"> <br>
-			Vertical / Category:     <input type="text" name="fname"> <br>
-			Sub - Vertical / Category:     <input type="text" name="fname"> <br>
-			Site Origin: <select>
+			<br>
+			Gender:<br> 
+			<select>
+	  			<option>Female</option>
+	  			<option>Male</option>
+			</select><br>
+			<br>	
+			<div id= "vertical"> Select Vertical: 
+				<br>
+    			<select class="multiselect" multiple="true" name="vertical">
+					<option> News </option>
+				    <option> Lifestyle </option>
+				    <option> Entertainment </option>
+				    <option> Sport </option>
+				    <option> Technology / Consumer Electronics </option>
+				    <option> Travel </option>
+				    <option> Food and Drink </option>
+				    <option> News AU </option>
+				    <option> Automotive </option>
+				    <option> B2B </option>
+				    <option> Science </option>
+				    <option> Business/Finance </option>
+				    <option> FMCG </option>
+				    <option> Male Lifestyle </option>
+				    <option> Female Lifestyle </option>
+				    <option> Fashion </option>
+				    <option> Beauty </option>
+				    <option> Education </option>
+				    <option> Celebrity </option>
+				    <option> Movies </option>
+				    <option> Music </option>
+				    <option> Millenials </option>
+				    <option> Gaming </option>
+				    <option> Parenting </option>
+				    <option> Health / Fitness </option>
+				    <option> DIY </option>
+				    <option> Art </option>
+				    <option> Home </option>
+    			</select>
+			</div>
+			<br>			
+			Site Origin: <br>
+			<select> 
 				<option value="AF">Afghanistan</option>
 				<option value="AX">Åland Islands</option>
 				<option value="AL">Albania</option>
@@ -347,42 +399,177 @@
 				<option value="YE">Yemen</option>
 				<option value="ZM">Zambia</option>
 				<option value="ZW">Zimbabwe</option>
+			</select> <br>
+			<br>
+			<div id= "language"> Select Site language: <br>	
+    			<select class="multiselect" multiple="true" name="language">
+					<option> English </option>
+					<option> German </option>
+					<option> Bengali </option>
+					<option> French </option>
+					<option> Malayam </option>
+					<option> Polish </option>
+					<option> Arabic </option>
+					<option> Spanish </option>
+					<option> Italian </option>
+					<option> Portuguese </option>
+					<option> Danish </option>
+					<option> Finnish </option>
+					<option> Swedish </option>
+					<option> Norwegian </option>
+					<option> Japanese </option>
+					<option> Dutch </option>
+					<option> Thai </option>
+					<option> Cantonese </option>
+					<option> Malay </option>
+					<option> Indonesian </option>
+					<option> Belgian </option>
+					<option> Hindi </option>
+					<option> Filipino </option>
+					<option> Vietnamese </option>
+					<option> Chinese </option>
+					<option> Tamil </option>
+					<option> Kannada </option>
+					<option> Bahasa Malay </option>
+					<option> Slovenian </option>
+					<option> Mandarin </option>
+					<option> Bahasa Indonesia </option>
+					<option> Albanian </option>
+					<option> Gujarati </option>
+    			</select>
+			</div><br>
+			<br>
+			AMP Site?:   
+			<select>
+	  			<option>Yes</option>
+	  			<option>No</option>
 			</select>
 			<br>
-			Site Language:     <input type="text" name="fname"> <br>
-			AMP Site ?:     <input type="text" name="fname"> <br>
-			Header Bidding Site ?:     <input type="text" name="fname"> <br>
-			Requires Approval ?:     <input type="text" name="fname"> <br>
-			White listed for RTB ?:     <input type="text" name="fname"> <br>
-			News Corp Site ?:     <input type="text" name="fname"> <br>
-			Accepts News audience reach extension campaigns ?:     <input type="text" name="fname"> <br>
-			Accepts campaigns advertising News Corp Titles ?:     <input type="text" name="fname"> <br>
-			Accepts Alcohol Campaigns ?:     <input type="text" name="fname"> <br>
-			Accepts Gambling Campaigns ?:     <input type="text" name="fname"> <br>
+			<br>  
+			Header Bidding Site?:    
+			<select>
+	  			<option>Yes</option>
+	  			<option>No</option>
+			</select>
+			<br>
+			<br>  
+			Requires Approval?:     
+			<select>
+	  			<option>Yes</option>
+	  			<option>No</option>
+			</select>
+			<br>
+			<br>  
+			White listed for RTB?:
+			<select>
+	  			<option>Yes</option>
+	  			<option>No</option>
+			</select>
+			<br>
+			<br>  
+			News Corp Site?:  
+			<select>
+	  			<option>Yes</option>
+	  			<option>No</option>
+			</select>
+			<br>
+			<br>  
+			Accepts News audience reach extension campaigns ?:     
+			<select>
+	  			<option>Yes</option>
+	  			<option>No</option>
+			</select>
+			<br>
+			<br>  
+			Accepts campaigns advertising News Corp Titles ?:     
+			<select>
+	  			<option>Yes</option>
+	  			<option>No</option>
+			</select>
+			<br>
+			<br>  
+			Accepts Alcohol Campaigns ?:    
+			<select>
+	  			<option>Yes</option>
+	  			<option>No</option>
+			</select>
+			<br>
+			<br>  
+			Accepts Gambling Campaigns ?: 
+			<select>
+	  			<option>Yes</option>
+	  			<option>No</option>
+			</select>
+			<br>
+			<br>  
 			Vertical / Brand Blacklist:     <input type="text" name="fname"> <br>
+			<br>
 			Brand Safety Measures:     <input type="text" name="fname"> <br>
-			Group M Approved ?:     <input type="text" name="fname"> <br>
-			Site vetted for content?:     <input type="text" name="fname"> <br>
+			<br>
+			Group M Approved ?: 
+			<select>
+	  			<option>Yes</option>
+	  			<option>No</option>
+			</select>
+			<br>
+			<br>  
+			Site vetted for content?: 
+			<select>
+	  			<option>Yes</option>
+	  			<option>No</option>
+			</select>
+			<br>
+			<br>  
 			Additional Notes:     <input type="text" name="fname"> <br>
+			<br>  
 			Ranking System:     <input type="text" name="fname"> <br>
+			<br>  
 			Comscore Top 50:     <input type="text" name="fname"> <br>
+			<br>  
 			Comscore Top 250:     <input type="text" name="fname"> <br>
+			<br>  
 			Comscore Top 500:     <input type="text" name="fname"> <br>
+			<br>  
 			[Format] In-Article:     <input type="text" name="fname"> <br>
+			<br>  
 			[Format] Vertical Video:     <input type="text" name="fname"> <br>
+			<br>  
 			[Format] Unmissable:     <input type="text" name="fname"> <br>
+			<br>  
 			[Format] In-Stream:     <input type="text" name="fname"> <br>
+			<br>  
 			[Format] Content Card:     <input type="text" name="fname"> <br>
+			<br>  
 			Ads.txt listing completed ?:     <input type="text" name="fname"> <br>
-			Available via Index Exchange ?:     <input type="text" name="fname"> <br>
-			Available via Bidswitch ?:     <input type="text" name="fname"> <br>
-			Available via Appnexus ?:     <input type="text" name="fname"> <br>
-			Available via Rubicon ?:     <input type="text" name="fname"> <br>
+			<br>    
+			<div id= "exchanges"> Availabel via exchanges?: 
+			<br>
+    			<select class="multiselect" multiple="true" name="exchanges">
+					<option> Index </option>
+				    <option> BidSwitch </option>
+				    <option> Rubicon </option>
+				    <option> AppNexus </option>
+    			</select>
+			</div><br>  
+			<br>			
 			[In-Stream] max. video length (in seconds):     <input type="text" name="fname"> <br>
-			[In-Stream] default audio:     <input type="text" name="fname"> <br>
-			[In-Stream] click to play ?:     <input type="text" name="fname"> <br>
+			<br>
+			[In-Stream] default audio:     
+			<select>
+	  			<option>Yes</option>
+	  			<option>No</option>
+			</select><br>  
+			<br>
+			[In-Stream] click to play ?:
+			<select>
+	  			<option>Yes</option>
+	  			<option>No</option>
+			</select><br>  
+			<br>
 			[In-Stream] default skippability:     <input type="text" name="fname"> <br>
+			<br>  
 			[In-Stream] Out-Of-View behavior:     <input type="text" name="fname"> <br>
+			<br>  
 			[In-Stream] Video Player:     <input type="text" name="fname"> <br>
 
 		
@@ -391,11 +578,6 @@
 		</form>
 	</div> <br>
 
-
-	<div id="DisplayAllPub">
-		<p> list of publishrs </p>
-  			<ul id = "list"></ul>
-  		</div>
 
     </div>
 
