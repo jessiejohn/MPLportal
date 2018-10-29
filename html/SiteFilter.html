@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- bootstrap-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	
+	<!-- jquery pluggin & chosen for multiselect -->
+  	<link rel="stylesheet" href="chosen.min.css">
+  	<script type="text/javascript" src="jquery-3.3.1.min.js"> </script>
+  	<script type="text/javascript" src="chosen.jquery.min.js"> </script>
+
+  	<!-- html, css & js-->
+	<link href="project.css" rel="stylesheet">
+	<link href="CreateNewSite.html" rel="html">
+	<link href="homepage.html" rel="html">
+	<script src="project.js"></script>
+
+
+	<title>Sitelist Filters</title>
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  		<!-- Brand -->
+    	<a href="#" class="pull-left"><img src="https://unruly.co/wp-content/themes/Unruly/assets/gfx/layout/logo.png"></a> 
+  		<!-- Links -->
+  		<ul class="navbar-nav">
+    		<li class="nav-item">
+      			<a class="nav-link" href="homepage.html"> Home Page</a>
+    		</li>
+    		<li class="nav-item">
+      			<a class="nav-link" href="CreateNewSite.html">Create New Site</a>
+    		</li>
+
+    		<!-- Dropdown -->
+    		<li class="nav-item dropdown">
+      			<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        		Dropdown link
+      			</a>
+      			<div class="dropdown-menu">
+              	<a class="TLR" href="https://console.unrulymedia.com/admin/generic_reporting/star?row_UnrulyViews=on&metrics=row_UnrulyViews&requestNoPadding=noPad&breakdown1=event_date" target="_blank">TLR</a>
+        			<a class="dropdown-item" href="#">Link 2</a>
+        			<a class="dropdown-item" href="#">Link 3</a>
+      			</div>
+    		</li>
+  		</ul>
+	</nav>
+
+	<br>
+	<div id= "vertical"> Select Vertical: 
+	<br>
+    	<select class="multiselect" multiple="true" name="vertical">
+			<option> News </option>
+		    <option> Lifestyle </option>
+		    <option> Entertainment </option>
+		    <option> Sport </option>
+		    <option> Technology / Consumer Electronics </option>
+		    <option> Travel </option>
+		    <option> Food & Drink </option>
+		    <option> News AU </option>
+		    <option> Automotive </option>
+		    <option> B2B </option>
+		    <option> Science </option>
+		    <option> Business/Finance </option>
+		    <option> FMCG </option>
+		    <option> Male Lifestyle </option>
+		    <option> Female Lifestyle </option>
+		    <option> Fashion </option>
+		    <option> Beauty </option>
+		    <option> Education </option>
+		    <option> Celebrity </option>
+		    <option> Movies </option>
+		    <option> Music </option>
+		    <option> Millenials </option>
+		    <option> Gaming </option>
+		    <option> Parenting </option>
+		    <option> Health / Fitness </option>
+		    <option> DIY </option>
+		    <option> Art </option>
+		    <option> Home </option>
+    	</select>
+	</div>
+	<br>
+
+	<div id="country"> Select Country:
+	<br>
+    	<select class="multiselect" multiple="true" name="country">
+			<option>  Afghanistan  </option>
+			<option>  Åland Islands  </option>
+			<option>  Albania  </option>
+			<option>  Algeria  </option>
+			<option>  American Samoa  </option>
+			<option>  Andorra  </option>
+			<option>  Angola  </option>
+			<option>  Anguilla  </option>
+			<option>  Antarctica  </option>
+			<option>  Antigua and Barbuda  </option>
+			<option>  Argentina  </option>
+			<option>  Armenia  </option>
+			<option>  Aruba  </option>
+			<option>  Australia  </option>
+			<option>  Austria  </option>
+			<option>  Azerbaijan  </option>
+			<option>  Bahamas  </option>
+			<option>  Bahrain  </option>
+			<option>  Bangladesh  </option>
+			<option>  Barbados  </option>
+			<option>  Belarus  </option>
+			<option>  Belgium  </option>
+			<option>  Belize  </option>
+			<option>  Benin  </option>
+			<option>  Bermuda  </option>
+			<option>  Bhutan  </option>
+			<option>  Bolivia, Plurinational State of  </option>
+			<option>  Bonaire, Sint Eustatius and Saba  </option>
+			<option>  Bosnia and Herzegovina  </option>
+			<option>  Botswana  </option>
+			<option>  Bouvet Island  </option>
+			<option>  Brazil  </option>
+			<option>  British Indian Ocean Territory  </option>
+			<option>  Brunei Darussalam  </option>
+			<option>  Bulgaria  </option>
+			<option>  Burkina Faso  </option>
+			<option>  Burundi  </option>
+			<option>  Cambodia  </option>
+			<option>  Cameroon  </option>
+			<option>  Canada  </option>
+			<option>  Cape Verde  </option>
+			<option>  Cayman Islands  </option>
+			<option>  Central African Republic  </option>
+			<option>  Chad  </option>
+			<option>  Chile  </option>
+			<option>  China  </option>
+			<option>  Christmas Island  </option>
+			<option>  Cocos (Keeling) Islands  </option>
+			<option>  Colombia  </option>
+			<option>  Comoros  </option>
+			<option>  Congo  </option>
+			<option>  Congo, the Democratic Republic of the  </option>
+			<option>  Cook Islands  </option>
+			<option>  Costa Rica  </option>
+			<option>  Côte d'Ivoire  </option>
+			<option>  Croatia  </option>
+			<option>  Cuba  </option>
+			<option>  Curaçao  </option>
+			<option>  Cyprus  </option>
+			<option>  Czech Republic  </option>
+			<option>  Denmark  </option>
+			<option>  Djibouti  </option>
+			<option>  Dominica  </option>
+			<option>  Dominican Republic  </option>
+			<option>  Ecuador  </option>
+			<option>  Egypt  </option>
+			<option>  El Salvador  </option>
+			<option>  Equatorial Guinea  </option>
+			<option>  Eritrea  </option>
+			<option>  Estonia  </option>
+			<option>  Ethiopia  </option>
+			<option>  Falkland Islands (Malvinas)  </option>
+			<option>  Faroe Islands  </option>
+			<option>  Fiji  </option>
+			<option>  Finland  </option>
+			<option>  France  </option>
+			<option>  French Guiana  </option>
+			<option>  French Polynesia  </option>
+			<option>  French Southern Territories  </option>
+			<option>  Gabon  </option>
+			<option>  Gambia  </option>
+			<option>  Georgia  </option>
+			<option>  Germany  </option>
+			<option>  Ghana  </option>
+			<option>  Gibraltar  </option>
+			<option>  Greece  </option>
+			<option>  Greenland  </option>
+			<option>  Grenada  </option>
+			<option>  Guadeloupe  </option>
+			<option>  Guam  </option>
+			<option>  Guatemala  </option>
+			<option>  Guernsey  </option>
+			<option>  Guinea  </option>
+			<option>  Guinea-Bissau  </option>
+			<option>  Guyana  </option>
+			<option>  Haiti  </option>
+			<option>  Heard Island and McDonald Islands  </option>
+			<option>  Holy See (Vatican City State)  </option>
+			<option>  Honduras  </option>
+			<option>  Hong Kong  </option>
+			<option>  Hungary  </option>
+			<option>  Iceland  </option>
+			<option>  India  </option>
+			<option>  Indonesia  </option>
+			<option>  Iran, Islamic Republic of  </option>
+			<option>  Iraq  </option>
+			<option>  Ireland  </option>
+			<option>  Isle of Man  </option>
+			<option>  Israel  </option>
+			<option>  Italy  </option>
+			<option>  Jamaica  </option>
+			<option>  Japan  </option>
+			<option>  Jersey  </option>
+			<option>  Jordan  </option>
+			<option>  Kazakhstan  </option>
+			<option>  Kenya  </option>
+			<option>  Kiribati  </option>
+			<option>  Korea, Democratic People's Republic of  </option>
+			<option>  Korea, Republic of  </option>
+			<option>  Kuwait  </option>
+			<option>  Kyrgyzstan  </option>
+			<option>  Lao People's Democratic Republic  </option>
+			<option>  Latvia  </option>
+			<option>  Lebanon  </option>
+			<option>  Lesotho  </option>
+			<option>  Liberia  </option>
+			<option>  Libya  </option>
+			<option>  Liechtenstein  </option>
+			<option>  Lithuania  </option>
+			<option>  Luxembourg  </option>
+			<option>  Macao  </option>
+			<option>  Macedonia, the former Yugoslav Republic of  </option>
+			<option>  Madagascar  </option>
+			<option>  Malawi  </option>
+			<option>  Malaysia  </option>
+			<option>  Maldives  </option>
+			<option>  Mali  </option>
+			<option>  Malta  </option>
+			<option>  Marshall Islands  </option>
+			<option>  Martinique  </option>
+			<option>  Mauritania  </option>
+			<option>  Mauritius  </option>
+			<option>  Mayotte  </option>
+			<option>  Mexico  </option>
+			<option>  Micronesia, Federated States of  </option>
+			<option>  Moldova, Republic of  </option>
+			<option>  Monaco  </option>
+			<option>  Mongolia  </option>
+			<option>  Montenegro  </option>
+			<option>  Montserrat  </option>
+			<option>  Morocco  </option>
+			<option>  Mozambique  </option>
+			<option>  Myanmar  </option>
+			<option>  Namibia  </option>
+			<option>  Nauru  </option>
+			<option>  Nepal  </option>
+			<option>  Netherlands  </option>
+			<option>  New Caledonia  </option>
+			<option>  New Zealand  </option>
+			<option>  Nicaragua  </option>
+			<option>  Niger  </option>
+			<option>  Nigeria  </option>
+			<option>  Niue  </option>
+			<option>  Norfolk Island  </option>
+			<option>  Northern Mariana Islands  </option>
+			<option>  Norway  </option>
+			<option>  Oman  </option>
+			<option>  Pakistan  </option>
+			<option>  Palau  </option>
+			<option>  Palestinian Territory, Occupied  </option>
+			<option>  Panama  </option>
+			<option>  Papua New Guinea  </option>
+			<option>  Paraguay  </option>
+			<option>  Peru  </option>
+			<option>  Philippines  </option>
+			<option>  Pitcairn  </option>
+			<option>  Poland  </option>
+			<option>  Portugal  </option>
+			<option>  Puerto Rico  </option>
+			<option>  Qatar  </option>
+			<option>  Réunion  </option>
+			<option>  Romania  </option>
+			<option>  Russian Federation  </option>
+			<option>  Rwanda  </option>
+			<option>  Saint Barthélemy  </option>
+			<option>  Saint Helena, Ascension and Tristan da Cunha  </option>
+			<option>  Saint Kitts and Nevis  </option>
+			<option>  Saint Lucia  </option>
+			<option>  Saint Martin (French part)  </option>
+			<option>  Saint Pierre and Miquelon  </option>
+			<option>  Saint Vincent and the Grenadines  </option>
+			<option>  Samoa  </option>
+			<option>  San Marino  </option>
+			<option>  Sao Tome and Principe  </option>
+			<option>  Saudi Arabia  </option>
+			<option>  Senegal  </option>
+			<option>  Serbia  </option>
+			<option>  Seychelles  </option>
+			<option>  Sierra Leone  </option>
+			<option>  Singapore  </option>
+			<option>  Sint Maarten (Dutch part)  </option>
+			<option>  Slovakia  </option>
+			<option>  Slovenia  </option>
+			<option>  Solomon Islands  </option>
+			<option>  Somalia  </option>
+			<option>  South Africa  </option>
+			<option>  South Georgia and the South Sandwich Islands  </option>
+			<option>  South Sudan  </option>
+			<option>  Spain  </option>
+			<option>  Sri Lanka  </option>
+			<option>  Sudan  </option>
+			<option>  Suriname  </option>
+			<option>  Svalbard and Jan Mayen  </option>
+			<option>  Swaziland  </option>
+			<option>  Sweden  </option>
+			<option>  Switzerland  </option>
+			<option>  Syrian Arab Republic  </option>
+			<option>  Taiwan, Province of China  </option>
+			<option>  Tajikistan  </option>
+			<option>  Tanzania, United Republic of  </option>
+			<option>  Thailand  </option>
+			<option>  Timor-Leste  </option>
+			<option>  Togo  </option>
+			<option>  Tokelau  </option>
+			<option>  Tonga  </option>
+			<option>  Trinidad and Tobago  </option>
+			<option>  Tunisia  </option>
+			<option>  Turkey  </option>
+			<option>  Turkmenistan  </option>
+			<option>  Turks and Caicos Islands  </option>
+			<option>  Tuvalu  </option>
+			<option>  Uganda  </option>
+			<option>  Ukraine  </option>
+			<option>  United Arab Emirates  </option>
+			<option>  United Kingdom  </option>
+			<option>  United States  </option>
+			<option>  United States Minor Outlying Islands  </option>
+			<option>  Uruguay  </option>
+			<option>  Uzbekistan  </option>
+			<option>  Vanuatu  </option>
+			<option>  Venezuela, Bolivarian Republic of  </option>
+			<option>  Viet Nam  </option>
+			<option>  Virgin Islands, British  </option>
+			<option>  Virgin Islands, U.S.  </option>
+			<option>  Wallis and Futuna  </option>
+			<option>  Western Sahara  </option>
+			<option>  Yemen  </option>
+			<option>  Zambia  </option>
+			<option>  Zimbabwe  </option>
+			</select>
+		</form>
+	</div>
+
+
+	<br>
+	<div id= "cpm"> Select CPM: 
+	<br>
+    	<select class="multiselect" multiple="true" name="cpm">
+			<option> $1 - $3 </option>
+			<option> $3.01 - $5 </option>
+			<option> $5.01 - $7 </option>
+			<option> $7.01 - $9 </option>
+			<option> $9.01 - $ 11 </option>
+			<option> $11.01 - $13 </option>
+			<option> $13.01 - $15 </option>
+			<option> $15.01 - $17 </option>
+			<option> $17.01 - $19 </option>
+			<option> $19.01 - $21 </option>
+			<option> $21.01 - $23 </option>
+			<option> $23.01 - $25 </option>
+			<option> $25.01 - $27 </option>
+			<option> $27.01 - $28 </option>
+			<option> $28.01 - $30 </option>
+			<option> >$30.01 </option>
+    	</select>
+	</div>
+	
+<br>
+	<div id= "alcohol"> Accepts Alcohol?: 
+	<br>
+    	<select class="multiselect" multiple="true" name="alcohol">
+			<option> Yes </option>
+			<option> No </option>
+    	</select>
+	</div>
+
+<br>
+	<div id= "gambling"> Accepts gambling?: 
+	<br>
+    	<select class="multiselect" multiple="true" name="gambling">
+			<option> Yes </option>
+			<option> No </option>
+    	</select>
+	</div>
+
+<br>
+	<div id= "format"> Select Format: 
+	<br>
+    	<select class="multiselect" multiple="true" name="format">
+			<option> In-Article </option>
+			<option> In-Stream </option>
+			<option> Unmissable </option>
+			<option> Vertical </option>
+			<option> In-Page </option>
+    	</select>
+	</div>
+
+
+	<br>
+	<div id= "language"> Select Site language: 
+	<br>
+    	<select class="multiselect" multiple="true" name="language">
+			<option> English </option>
+			<option> German </option>
+			<option> Bengali </option>
+			<option> French </option>
+			<option> Malayam </option>
+			<option> Polish </option>
+			<option> Arabic </option>
+			<option> Spanish </option>
+			<option> Italian </option>
+			<option> Portuguese </option>
+			<option> Danish </option>
+			<option> Finnish </option>
+			<option> Swedish </option>
+			<option> Norwegian </option>
+			<option> Japanese </option>
+			<option> Dutch </option>
+			<option> Thai </option>
+			<option> Cantonese </option>
+			<option> Malay </option>
+			<option> Indonesian </option>
+			<option> Belgian </option>
+			<option> Hindi </option>
+			<option> Filipino </option>
+			<option> Vietnamese </option>
+			<option> Chinese </option>
+			<option> Tamil </option>
+			<option> Kannada </option>
+			<option> Bahasa Malay </option>
+			<option> Slovenian </option>
+			<option> Mandarin </option>
+			<option> Bahasa Indonesia </option>
+			<option> Albanian </option>
+			<option> Gujarati </option>
+    	</select>
+	</div>
+
+<br>
+	<div id= "whitelisted"> Whitelisted for RTB?: 
+	<br>
+    	<select class="multiselect" multiple="true" name="Whitelisted">
+			<option> Yes </option>
+			<option> No </option>
+    	</select>
+	</div>
+
+
+<br>
+	<div id= "approval"> Requires BD approval?: 
+	<br>
+    	<select class="multiselect" multiple="true" name="approval">
+			<option> Yes </option>
+			<option> No </option>
+    	</select>
+	</div>
+
+<br>
+	<div id= "exchanges"> Excahnges Availabe through?: 
+	<br>
+    	<select class="multiselect" multiple="true" name="exchanges">
+			<option> Index </option>
+			<option> AppNexus </option>
+			<option> Rubicon </option>
+			<option> BidSwitch </option>
+
+    	</select>
+	</div>
+	<br>
+
+	<button id="filter" class="btn btn-secondary">Filter </button> <br>
+
+	<br>
+	<button id="Download" class="btn btn-secondary">Download Current View</button> <br>
+	<br>
+
+
+</body>
+
+</html>
+

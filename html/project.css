@@ -1,0 +1,11 @@
+html.body {
+    margin: 2px;
+    height:100%;
+    background-color:blue;
+}
+
+
+.multiselect {
+width: 500px;
+height:500px;
+};
