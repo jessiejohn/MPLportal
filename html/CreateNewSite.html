@@ -37,8 +37,11 @@
     		<li class="nav-item">
       			<a class="nav-link" href="SiteFilter.html">Filter Sites</a>
     		</li>
+    		<li class="nav-item">
+            	<a class="nav-link" href="https://console.unrulymedia.com/admin/generic_reporting/star?row_UnrulyViews=on&metrics=row_UnrulyViews&requestNoPadding=noPad&breakdown1=event_date" target="_blank"> TLR</a>
+        	</li>
 
-    		<!-- Dropdown -->
+    		<!-- Dropdown 
     		<li class="nav-item dropdown">
       			<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
         		Dropdown link
@@ -49,7 +52,7 @@
         			<a class="dropdown-item" href="#">Link 2</a>
         			<a class="dropdown-item" href="#">Link 3</a>
       			</div>
-    		</li>
+    		</li>-->
   		</ul>
 	</nav>
 
@@ -58,64 +61,91 @@
 		<h2> Add publisher data </h2>
 		<form id="frm1">
 			<div>
-        		<label for="start">Date</label>
+        		<label for="start">Date Added</label>
         		<input type="date" id="date" value="yyyy-MM-dd" min="2010-01-01" max="2018-12-31" />
     		</div> <br>
 
 			Status:<br> 
 			<select>
+				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Active</option>
 	  			<option>In Process</option>
 	  			<option>On Hold</option>
 	  			<option>Lost</option>
 	  			<option>Site Discontinued</option>
-
 			</select><br>
 			<br>			
+			
 			Site Name:     <input type="text" name="fname"> <br>
 			<br>
+			
 			Site ID:     	<input type="text" name="fname"> <br>
 			<br>
+			
 			UUID:     	<input type="text" name="fname"> <br>
 			<br>
+			
 			Site URL:     <input type="text" name="fname"> <br>
 			<br>
+			
 			Internal Description:     <input type="text" name="fname"> <br>
 			<br>
+			
 			Parent Network:     <input type="text" name="fname"> <br>
 			<br>
+			
 			Account Manager:     <input type="text" name="fname"> <br>
 			<br>
+			
 			Contact Name:     <input type="text" name="fname"> <br>
 			<br>
+			
 			Contact Email:     <input type="text" name="fname"> <br>
 			<br>
-			Currency:     <input type="text" name="fname"> <br>
+			
+			Currency:
+				<select>
+					<option disabled="disabled" selected="selected">Select an option</option>
+		  			<option>USD</option>
+		  			<option>GBP</option>
+		  			<option>EUR</option>
+				</select><br>
 			<br>
+			
 			[CPM] UnrulyX Out-Stream:     <input type="text" name="fname"> <br>
 			<br>
+			
 			[CPM] UnrulyX Mobile Out-Stream:     <input type="text" name="fname"> <br>
 			<br>
+			
 			[CPM] UnrulyX In-Stream:     <input type="text" name="fname"> <br>
 			<br>
+			
 			[CPM] UnrulyX Mobile In-Stream:     <input type="text" name="fname"> <br>
 			<br>
+			
 			[CPM] In-Article (direct):     <input type="text" name="fname"> <br>
 			<br>
+			
 			[CPM] In-Article Mobile (direct):     <input type="text" name="fname"> <br>
 			<br>
+			
 			[CPM] Vertical Video (direct):     <input type="text" name="fname"> <br>
 			<br>
+			
 			[CPM] Unmissable (direct):     <input type="text" name="fname"> <br>
 			<br>
+			
 			Gender:<br> 
 			<select>
+				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Female</option>
 	  			<option>Male</option>
+				<option>Even</option>
 			</select><br>
 			<br>	
-			<div id= "vertical"> Select Vertical: 
-				<br>
+			
+			<div id= "vertical"> Select Vertical: <br>
     			<select class="multiselect" multiple="true" name="vertical">
 					<option> News </option>
 				    <option> Lifestyle </option>
@@ -148,8 +178,10 @@
     			</select>
 			</div>
 			<br>			
+			
 			Site Origin: <br>
 			<select> 
+				<option disabled="disabled" selected="selected">Select an option</option>
 				<option value="AF">Afghanistan</option>
 				<option value="AX">Åland Islands</option>
 				<option value="AL">Albania</option>
@@ -401,6 +433,7 @@
 				<option value="ZW">Zimbabwe</option>
 			</select> <br>
 			<br>
+
 			<div id= "language"> Select Site language: <br>	
     			<select class="multiselect" multiple="true" name="language">
 					<option> English </option>
@@ -439,111 +472,149 @@
     			</select>
 			</div><br>
 			<br>
+
 			AMP Site?:   
 			<select>
+				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
-			</select>
-			<br>
+			</select> <br>
 			<br>  
+			
 			Header Bidding Site?:    
 			<select>
+				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
-			</select>
-			<br>
+			</select> <br>
 			<br>  
+
 			Requires Approval?:     
 			<select>
+				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
-			</select>
-			<br>
+			</select> <br>
 			<br>  
+
 			White listed for RTB?:
 			<select>
+				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
-			</select>
-			<br>
-			<br>  
+			</select> <br>
+			<br> 
+
 			News Corp Site?:  
 			<select>
+				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
-			</select>
-			<br>
+			</select> <br>
 			<br>  
-			Accepts News audience reach extension campaigns ?:     
+
+			Accepts News audience reach extension campaigns?:     
 			<select>
+				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
-			</select>
-			<br>
+			</select> <br>
 			<br>  
-			Accepts campaigns advertising News Corp Titles ?:     
+
+			Accepts campaigns advertising News Corp Titles?:     
 			<select>
+				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
-			</select>
-			<br>
+			</select> <br>
 			<br>  
-			Accepts Alcohol Campaigns ?:    
+
+			Accepts Alcohol Campaigns?:    
 			<select>
+				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
-			</select>
-			<br>
-			<br>  
+	  			<option>Requires Approval</option>
+			</select> <br>
+			<br> 
+
 			Accepts Gambling Campaigns ?: 
 			<select>
+				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
-			</select>
-			<br>
+	  			<option>Requires Approval</option>
+			</select> <br>
 			<br>  
+
 			Vertical / Brand Blacklist:     <input type="text" name="fname"> <br>
 			<br>
+			
 			Brand Safety Measures:     <input type="text" name="fname"> <br>
 			<br>
-			Group M Approved ?: 
+			
+			Group M Approved?: 
 			<select>
+				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
-			</select>
-			<br>
+			</select> <br>
 			<br>  
+
 			Site vetted for content?: 
 			<select>
+				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
-			</select>
-			<br>
+			</select> <br>
 			<br>  
+
 			Additional Notes:     <input type="text" name="fname"> <br>
+			<br> 
+
+			Ranking System?: 
+			<select>
+				<option disabled="disabled" selected="selected">Select an option</option>
+	  			<option>AGOF</option>
+	  			<option>ComScore</option>
+	  			<option>GoldCore</option>
+	  			<option>Kiaindex</option>
+	  			<option>Ocast</option>
+	  			<option>SimilarWeb</option>
+	  			<option>SisIndex</option>
+			</select><br>  			
 			<br>  
-			Ranking System:     <input type="text" name="fname"> <br>
+			
+			ComScore Rank: 
+			<select>
+				<option disabled="disabled" selected="selected">Select an option</option>
+	  			<option>Top 50 </option>
+	  			<option> Within top 51 to 250</option>
+	  			<option>Over 500 </option>
+			</select><br>
 			<br>  
-			Comscore Top 50:     <input type="text" name="fname"> <br>
+			
+			<div id= "format"> Formats Accepted: <br>
+    			<select class="multiselect" multiple="true" name="format">
+					<option> In-Article </option>
+					<option> In-Stream </option>
+					<option> Unmissable </option>
+					<option> Vertical </option>
+					<option> In-Page </option>
+					<option> Content Card </option>
+    			</select>
+			</div>
 			<br>  
-			Comscore Top 250:     <input type="text" name="fname"> <br>
-			<br>  
-			Comscore Top 500:     <input type="text" name="fname"> <br>
-			<br>  
-			[Format] In-Article:     <input type="text" name="fname"> <br>
-			<br>  
-			[Format] Vertical Video:     <input type="text" name="fname"> <br>
-			<br>  
-			[Format] Unmissable:     <input type="text" name="fname"> <br>
-			<br>  
-			[Format] In-Stream:     <input type="text" name="fname"> <br>
-			<br>  
-			[Format] Content Card:     <input type="text" name="fname"> <br>
-			<br>  
-			Ads.txt listing completed ?:     <input type="text" name="fname"> <br>
+			
+			Ads.txt listing completed ?:     
+			<select>
+				<option disabled="disabled" selected="selected">Select an option</option>
+	  			<option>Yes</option>
+	  			<option>No</option>
+			</select><br>  
 			<br>    
-			<div id= "exchanges"> Availabel via exchanges?: 
-			<br>
+			
+			<div id= "exchanges"> Availabel via?: <br>
     			<select class="multiselect" multiple="true" name="exchanges">
 					<option> Index </option>
 				    <option> BidSwitch </option>
@@ -551,27 +622,46 @@
 				    <option> AppNexus </option>
     			</select>
 			</div><br>  
-			<br>			
+			<br>
+
 			[In-Stream] max. video length (in seconds):     <input type="text" name="fname"> <br>
 			<br>
+
 			[In-Stream] default audio:     
 			<select>
+				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
 			</select><br>  
 			<br>
+
 			[In-Stream] click to play ?:
 			<select>
+				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
 			</select><br>  
 			<br>
-			[In-Stream] default skippability:     <input type="text" name="fname"> <br>
-			<br>  
-			[In-Stream] Out-Of-View behavior:     <input type="text" name="fname"> <br>
-			<br>  
-			[In-Stream] Video Player:     <input type="text" name="fname"> <br>
 
+			[In-Stream] default skippability: 
+			<select>
+				<option disabled="disabled" selected="selected">Select an option</option>
+	  			<option>Skippable</option>
+	  			<option>Non-Skippable</option>
+	  			<option>Both</option>
+			</select><br>  
+			<br> 
+
+			[In-Stream] Out-Of-View behavior:
+			<select>
+				<option disabled="disabled" selected="selected">Select an option</option>
+	  			<option>Pause out of view</option>
+	  			<option>Continue of of view</option>
+	  			<option>Sticky player</option>
+			</select><br>  
+			<br> 
+
+			[In-Stream] Video Player:     <input type="text" name="fname"> <br>
 		
 
 		<button id="NewPub" class="btn btn-warning">Add new publisher</button> <br>
