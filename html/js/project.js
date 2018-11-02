@@ -28,5 +28,23 @@ var uid = null
 	})()
 
 
+//var rootRef= firebase.database().ref().child();
+ // rootRef.on("child_added", snap=> {
+   // var siteID = snap.child("SiteId").val();
+  //  var siteName = snap.child("SiteName").val();
+
+   // $("#table").append("<tr><td>" + siteID + "</td><td>" + siteName + "</td><td><button>Remove</button></td></tr>");
+
+  //});
+/* https://www.youtube.com/watch?v=noB98K6A0TY
+const preObject= document.getElementByID('object');
+
+const dbRefObject = firebase.database().ref().child('object');
+
+
+dbRefObject.on('value', snap => {
+  preObject.innerText = JSON.stringify(snap.val(), null, 3);
+});
+*/
 
 
