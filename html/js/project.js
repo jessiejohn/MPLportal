@@ -27,42 +27,8 @@ var uid = null
 
 	})()
 
-//var rootRef= firebase.database().ref().child();
- // rootRef.on("child_added", snap=> {
-   // var siteID = snap.child("SiteId").val();
-  //  var siteName = snap.child("SiteName").val();
-
-   // $("#table").append("<tr><td>" + siteID + "</td><td>" + siteName + "</td><td><button>Remove</button></td></tr>");
-
-  //});
-/* https://www.youtube.com/watch?v=noB98K6A0TY
-const preObject= document.getElementByID('object');
-
-const dbRefObject = firebase.database().ref().child('object');
 
 
-dbRefObject.on('value', snap => {
-  preObject.innerText = JSON.stringify(snap.val(), null, 3);
-});
-*/
-
-/*var restaurantWishList = firebase.database()
-  // Create a section for messages data in your db
-var restaurantsList = restaurantWishList.ref('restaurants')
-
-$('.buttonTwo').click(function (event){
-    event.preventDefault()
-        var restaurantName = $('#input').val()
-        restaurantsList.push({
-            restaurant: restaurantName,
-            votes: 0,
-            //liked: true,
-            user: firebase.auth().currentUser.displayName,
-        })
-
-    $('#input').val('')
-})
-*/
 
 var mplPortal = firebase.database()
 var siteList = mplPortal.ref('sites')
@@ -110,7 +76,7 @@ $('#NewPub').click(function (event){
   var brandSafety = $('#brandSafety').val()
   
   var groupM = $('#groupM').val()
-  var content = $('#content').val()
+  var contents = $('#contents').val()
   var notes = $('#notes').val()
   var ranking = $('#ranking').val()
   var comScore = $('#comScore').val()
@@ -167,7 +133,7 @@ $('#NewPub').click(function (event){
     brandSafety:brandSafety,
     
     groupM: groupM,
-    content: content,
+    contents: contents,
     notes: notes,
     ranking:ranking,
     comScore:comScore,
@@ -237,6 +203,147 @@ $('#NewPub').click(function (event){
     $('#player').val('')*/
 
 })
+
+
+/*function getSiteList() {
+    // listens for changes to the `messages` node in the DB
+  mplPortal.ref('sites').on('value', function (results) {
+    $('#index').empty()
+    results.forEach(function (msg) {
+      var entity = msg.val()
+  var date = entity.date
+  var status = entity.status
+  var siteName = entity.siteName
+  var SiteId = entity.SiteId
+  var SiteUUID = entity.SiteUUID
+  var SiteURL = entity.SiteURL
+  var SiteDesc = entity.SiteDesc
+      //console.log(message, id)
+      //below we add $ to the variable name just to make it clear its jquery. dont have to. its to make it very clear is jquery
+      console.log(entity)
+      var $td = $('#Siteid').text(SiteId)
+      var $td = $('#SiteName').text(siteName)
+
+    })
+  })
+}
+getSiteList()*/
+
+
+var database = firebase.database().ref().child('sites');
+database.once('value', function(snapshot){
+    if(snapshot.exists()){
+        var content = '';
+
+        snapshot.forEach(function(data){
+            var date=data.val().date;
+            var status=data.val().status;
+            var siteName=data.val().siteName;
+            var SiteId=data.val().SiteId;
+            var SiteUUID=data.val().SiteUUID;
+            var SiteURL=data.val().SiteURL;
+            var SiteDesc=data.val().SiteDesc;
+            var parentNetwork=data.val().parentNetwork;
+            var accountManager=data.val().accountManager;
+            var contactName=data.val().contactName;
+            var contactEmail=data.val().contactEmail;
+            var currency=data.val().currency;
+            var outStream=data.val().outStream;
+            var mobileOutStream=data.val().mobileOutStream;
+            var inStream=data.val().inStream;
+            var mobileInStream=data.val().mobileInStream;
+            var inArticle=data.val().inArticle;
+            var mobileInArticle=data.val().mobileInArticle;
+            var verticalVideo=data.val().verticalVideo;
+            var unmissable=data.val().unmissable;
+            var gender=data.val().gender;
+            var vertical=data.val().vertical;
+            var siteOrigin=data.val().siteOrigin;
+            var language=data.val().language;
+            var ampSite=data.val().ampSite;
+            var headerBidding=data.val().headerBidding;
+            var approval=data.val().approval;
+            var whiteList=data.val().whiteList;
+            var newsCorp=data.val().newsCorp;
+            var reachExtension=data.val().reachExtension;
+            var newsCorpCampagin=data.val().newsCorpCampagin;
+            var alcohol=data.val().alcohol;
+            var gambling=data.val().gambling;
+            var blacklist=data.val().blacklist;
+            var brandSafety=data.val().brandSafety;
+            var groupM=data.val().groupM;
+            var contents=data.val().contents;
+            var notes=data.val().notes;
+            var ranking=data.val().ranking;
+            var comScore=data.val().comScore;
+            var format=data.val().format;
+            var adsTxt=data.val().adsTxt;
+            var exchanges=data.val().exchanges;
+            var videoLength=data.val().videoLength;
+            var audio=data.val().audio;
+            var clickToPlay=data.val().clickToPlay;
+            var skippability=data.val().skippability;
+            var outOfView=data.val().outOfView;
+            var player=data.val().player;
+            
+            content += '<tr>';
+
+            content += '<td>' + date + '</td>';
+            content += '<td>' + status  + '</td>';
+            content += '<td>' + siteName  + '</td>';
+            content += '<td>' + SiteId  + '</td>';
+            content += '<td>' + SiteUUID  + '</td>';
+            content += '<td>' + SiteURL  + '</td>';
+            content += '<td>' + SiteDesc  + '</td>';
+            content += '<td>' + parentNetwork  + '</td>';
+            content += '<td>' + accountManager  + '</td>';
+            content += '<td>' + contactName + '</td>';
+            content += '<td>' + contactEmail + '</td>';
+            content += '<td>' + currency + '</td>';
+            content += '<td>' + outStream + '</td>';
+            content += '<td>' + mobileOutStream + '</td>';
+            content += '<td>' + inStream + '</td>';
+            content += '<td>' + mobileInStream + '</td>';
+            content += '<td>' + inArticle + '</td>';
+            content += '<td>' + mobileInArticle + '</td>';
+            content += '<td>' + verticalVideo + '</td>';
+            content += '<td>' + unmissable + '</td>';
+            content += '<td>' + gender + '</td>';
+            content += '<td>' + vertical + '</td>';
+            content += '<td>' + siteOrigin + '</td>';
+            content += '<td>' + language + '</td>';
+            content += '<td>' + ampSite + '</td>';
+            content += '<td>' + headerBidding + '</td>';
+            content += '<td>' + approval + '</td>';
+            content += '<td>' + whiteList + '</td>';
+            content += '<td>' + newsCorp + '</td>';
+            content += '<td>' + reachExtension + '</td>';
+            content += '<td>' + newsCorpCampagin + '</td>';
+            content += '<td>' + alcohol + '</td>';
+            content += '<td>' + gambling + '</td>';
+            content += '<td>' + blacklist + '</td>';
+            content += '<td>' + brandSafety + '</td>';
+            content += '<td>' + groupM + '</td>';
+            content += '<td>' + contents + '</td>';
+            content += '<td>' + notes + '</td>';
+            content += '<td>' + ranking + '</td>';
+            content += '<td>' + comScore + '</td>';
+            content += '<td>' + format + '</td>';
+            content += '<td>' + adsTxt + '</td>';
+            content += '<td>' + exchanges + '</td>';
+            content += '<td>' + videoLength + '</td>';
+            content += '<td>' + audio + '</td>';
+            content += '<td>' + clickToPlay + '</td>';
+            content += '<td>' + skippability + '</td>';
+            content += '<td>' + outOfView + '</td>';
+            content += '<td>' + player + '</td>';
+
+            content += '</tr>';
+        });
+
+        $('#table').append(content);
+    }
+});
 
 
 
