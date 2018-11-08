@@ -260,7 +260,8 @@ database.once('value', function(snapshot){
             var skippability=data.val().skippability;
             var outOfView=data.val().outOfView;
             var player=data.val().player;
-            
+            var user=data.val().user;
+
             content += '<tr>';
 
             content += '<td>' + date + '</td>';
@@ -312,6 +313,7 @@ database.once('value', function(snapshot){
             content += '<td>' + skippability + '</td>';
             content += '<td>' + outOfView + '</td>';
             content += '<td>' + player + '</td>';
+            content += '<td>' + user + '</td>';
 
             content += '</tr>';
         });
@@ -377,6 +379,8 @@ database.once('value', function(snapshot){
             var skippability=data.val().skippability;
             var outOfView=data.val().outOfView;
             var player=data.val().player;
+            var user=data.val().user;
+
             
             content += '<tr>';
 
@@ -429,6 +433,8 @@ database.once('value', function(snapshot){
             content += '<td>' + skippability + '</td>';
             content += '<td>' + outOfView + '</td>';
             content += '<td>' + player + '</td>';
+            content += '<td>' + user + '</td>';
+
 
             content += '</tr>';
         });

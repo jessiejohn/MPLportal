@@ -4,6 +4,9 @@ html.body {
     background-color:blue;
 }
 
+.navbar {
+    width: 5000px;
+}
 
 .multiselect {
 width: 500px;
@@ -11,12 +14,12 @@ height:500px;
 };
 
 #button {
-
 float: right;
 }
 
 table {
     font-family: arial, sans-serif;
+    font-size: 15px;
     border-collapse: collapse;
     width: 100%;
 }
@@ -30,4 +33,3 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
-</style>
