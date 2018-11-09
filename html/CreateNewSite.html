@@ -65,6 +65,7 @@
 
 	<div id= "CreateNewPub">
 		<h2> Add publisher data </h2>
+		
 		<form id="frm1">
 			<div>
         		<label for="start">Date Added</label>
@@ -80,27 +81,28 @@
 	  			<option>Lost</option>
 	  			<option>Site Discontinued</option>
 			</select><br>
-			<br>			
-			
-			Site Name:     <input id= "siteName" type="text" name="fname"> <br>
+			<br>
+
+			Site Name:     <input id= "siteName" type="text" name="siteName" required> <br>
 			<br>
 			
-			Site ID:     	<input id= "siteId" type="text" name="fname"> <br>
+
+			Site ID:     	<input id= "siteId" type="text" name="fname" required> <br>
 			<br>
 			
-			UUID:     	<input id= "siteUUID" type="text" name="fname"> <br>
+			UUID:     	<input id= "siteUUID" type="text" name="fname" required> <br>
 			<br>
 			
-			Site URL:     <input id= "siteURL" type="text" name="fname"> <br>
+			Site URL:     <input id= "siteURL" type="text" name="fname" required> <br>
 			<br>
 			
 			Internal Description:     <input id= "siteDesc" type="text" name="fname"> <br>
 			<br>
 			
-			Parent Network:     <input id= "parentNetwork" type="text" name="fname"> <br>
+			Parent Network:     <input id= "parentNetwork" type="text" name="fname" required> <br>
 			<br>
 			
-			Account Manager:     <input id= "accountManager" type="text" name="fname"> <br>
+			Account Manager:     <input id= "accountManager" type="text" name="fname" required> <br>
 			<br>
 			
 			Contact Name:     <input id= "contactName" type="text" name="fname"> <br>
@@ -118,28 +120,28 @@
 				</select><br>
 			<br>
 			
-			[CPM] UnrulyX Out-Stream:     <input id= "outStream" type="text" name="fname"> <br>
+			[CPM] UnrulyX Out-Stream:     <input id= "outStream" type="text" name="fname" required> <br>
 			<br>
 			
-			[CPM] UnrulyX Mobile Out-Stream:     <input id= "mobileOutStream" type="text" name="fname"> <br>
+			[CPM] UnrulyX Mobile Out-Stream:     <input id= "mobileOutStream" type="text" name="fname" required> <br>
 			<br>
 			
-			[CPM] UnrulyX In-Stream:     <input id= "inStream"  type="text" name="fname"> <br>
+			[CPM] UnrulyX In-Stream:     <input id= "inStream"  type="text" name="fname" required> <br>
 			<br>
 			
-			[CPM] UnrulyX Mobile In-Stream:     <input id= "mobileInStream"  type="text" name="fname"> <br>
+			[CPM] UnrulyX Mobile In-Stream:     <input id= "mobileInStream"  type="text" name="fname" required> <br>
 			<br>
 			
-			[CPM] In-Article (direct):     <input id= "inArticle"  type="text" name="fname"> <br>
+			[CPM] In-Article (direct):     <input id= "inArticle"  type="text" name="fname" required> <br>
 			<br>
 			
-			[CPM] In-Article Mobile (direct):     <input id= "mobileInArticle"  type="text" name="fname"> <br>
+			[CPM] In-Article Mobile (direct):     <input id= "mobileInArticle"  type="text" name="fname" required> <br>
 			<br>
 			
-			[CPM] Vertical Video (direct):     <input id= "verticalVideo"  type="text" name="fname"> <br>
+			[CPM] Vertical Video (direct):     <input id= "verticalVideo"  type="text" name="fname" required> <br>
 			<br>
 			
-			[CPM] Unmissable (direct):     <input id= "unmissable"  type="text" name="fname"> <br>
+			[CPM] Unmissable (direct):     <input id= "unmissable"  type="text" name="fname" required> <br>
 			<br>
 			
 			Gender:<br> 
@@ -152,7 +154,7 @@
 			<br>	
 			
 			<div> Select Vertical: <br>
-    			<select id= "vertical"  class="multiselect" multiple="true" name="vertical">
+    			<select id= "vertical"  class="multiselect" multiple="true" name="vertical" required>
 					<option> News </option>
 				    <option> Lifestyle </option>
 				    <option> Entertainment </option>
@@ -186,8 +188,8 @@
 			<br>			
 			
 			Site Origin: <br>
-			<select id= "siteOrigin" > 
-				<option disabled="disabled" selected="selected">Select an option</option>
+			<select id= "siteOrigin" required> 
+				<option disabled="disabled" selected="selected" >Select an option</option>
 				<option value="AF">Afghanistan</option>
 				<option value="AX">Åland Islands</option>
 				<option value="AL">Albania</option>
@@ -441,7 +443,7 @@
 			<br>
 
 			<div> Select Site language: <br>	
-    			<select id= "language" class="multiselect" multiple="true" name="language">
+    			<select id= "language" class="multiselect" multiple="true" name="language" required>
 					<option> English </option>
 					<option> German </option>
 					<option> Bengali </option>
@@ -480,15 +482,15 @@
 			<br>
 
 			AMP Site?:   
-			<select id= "ampSite" >
-				<option disabled="disabled" selected="selected">Select an option</option>
+			<select id= "ampSite" required>
+				<option disabled="disabled" selected="selected" >Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
 			</select> <br>
 			<br>  
 			
 			Header Bidding Site?:    
-			<select id= "headerBidding">
+			<select id= "headerBidding" required>
 				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
@@ -496,7 +498,7 @@
 			<br>  
 
 			Requires Approval?:     
-			<select id="approval">
+			<select id="approval" required>
 				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
@@ -504,7 +506,7 @@
 			<br>  
 
 			White listed for RTB?:
-			<select id="whiteList">
+			<select id="whiteList" required>
 				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
@@ -512,7 +514,7 @@
 			<br> 
 
 			News Corp Site?:  
-			<select id="newsCorp">
+			<select id="newsCorp" required >
 				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
@@ -520,7 +522,7 @@
 			<br>  
 
 			Accepts News audience reach extension campaigns?:     
-			<select id= "reachExtension">
+			<select id= "reachExtension" required>
 				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
@@ -528,7 +530,7 @@
 			<br>  
 
 			Accepts campaigns advertising News Corp Titles?:     
-			<select id= "newsCorpCampagin">
+			<select id= "newsCorpCampagin" required>
 				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
@@ -536,7 +538,7 @@
 			<br>  
 
 			Accepts Alcohol Campaigns?:    
-			<select id="alcohol" >
+			<select id="alcohol" required>
 				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
@@ -545,7 +547,7 @@
 			<br> 
 
 			Accepts Gambling Campaigns ?: 
-			<select id="gambling">
+			<select id="gambling" required>
 				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
@@ -553,14 +555,14 @@
 			</select> <br>
 			<br>  
 
-			Vertical / Brand Blacklist:     <input id="blacklist"  type="text" name="fname"> <br>
+			Vertical / Brand Blacklist:     <input id="blacklist"  type="text" name="fname" > <br>
 			<br>
 			
 			Brand Safety Measures:     <input id="brandSafety"  type="text" name="fname"> <br>
 			<br>
 			
 			Group M Approved?: 
-			<select id= "groupM" >
+			<select id= "groupM" required>
 				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
@@ -568,18 +570,18 @@
 			<br>  
 
 			Site vetted for content?: 
-			<select id= "contents" >
+			<select id= "contents" required>
 				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Yes</option>
 	  			<option>No</option>
 			</select> <br>
 			<br>  
 
-			Additional Notes:     <input id="notes"  type="text" name="fname"> <br>
+			Additional Notes:     <input id="notes"  type="text" name="fname" required> <br>
 			<br> 
 
 			Ranking System?: 
-			<select id= "ranking">
+			<select id= "ranking" required>
 				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>AGOF</option>
 	  			<option>ComScore</option>
@@ -592,7 +594,7 @@
 			<br>  
 			
 			ComScore Rank: 
-			<select id= "comScore" >
+			<select id= "comScore" required >
 				<option disabled="disabled" selected="selected">Select an option</option>
 	  			<option>Top 50 </option>
 	  			<option> Within top 51 to 250</option>
@@ -601,7 +603,7 @@
 			<br>  
 			
 			<div> Formats Accepted: <br>
-    			<select id= "format" class="multiselect" multiple="true" name="format">
+    			<select id= "format" class="multiselect" multiple="true" name="format" required>
 					<option> In-Article </option>
 					<option> In-Stream </option>
 					<option> Unmissable </option>
@@ -669,13 +671,11 @@
 
 			[In-Stream] Video Player:     <input id= "player"  type="text" name="fname"> <br>
 		
+		<input type="submit" class="link-button-blue" id="NewPub" value="Submit" /> 
 
-		<button id="NewPub" class="btn btn-warning">  Add new publisher </button> <br>
 
-		
 		</form>
 	</div> <br>
-
   	<script src="js/key.js"></script>
 	<script src="js/project.js"></script>
 

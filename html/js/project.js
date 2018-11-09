@@ -1,4 +1,4 @@
-//chosen
+//chosen to have drop down with multiple selectors
 $(function() {
     $(".multiselect").chosen();
 });
@@ -8,149 +8,144 @@ var mainApp = {};
 
 (function () {
 	var firebase = app_fireBase
-var uid = null
+    var uid = null
 	firebase.auth().onAuthStateChanged(function(user) {
-  	if (user) {
-    	// User is signed in.
-      uid = user.uid;
-  		} else {
+        if (user) {
+        // User is signed in.
+            uid = user.uid;
+        } else {
   			//redirect to login page
-  			uid = null
-  				window.location.replace("Login.html")
-  			}
-  		});
+            uid = null
+  			window.location.replace("Login.html")
+        }
+  	});
 
-  function logOut() {
-  			firebase.auth().signOut()
-  		}
-  		mainApp.logOut=logOut;
+    function logOut() {
+  		firebase.auth().signOut()
+  	}
+  	mainApp.logOut=logOut;
+})()
 
-	})()
+//code to flag required input fields. its conficting with the firebase submit fuction
+//$('form').submit(function(){
+//var valid = true;
+ // $('input[required]').each(function(i, el){
+   // if(valid && $(el).val()=='' ) valid = false; 
+ // })
+//return valid;
+//})
 
+//creating new database from CreateNewSite.html tab entries
 
-
-//creating new databse from createsites to the database
 var mplPortal = firebase.database()
 var siteList = mplPortal.ref('sites')
-$('#NewPub').click(function (event){
-  event.preventDefault()
 
-  var date = $('#date').val()
-  var status = $('#status').val()
-  var siteName = $('#siteName').val()
-  var SiteId = $('#siteId').val()
-  var SiteUUID = $('#siteUUID').val()
-  var SiteURL = $('#siteURL').val()
-  var SiteDesc = $('#siteDesc').val()
+$('#NewPub').click (function (event){
+    event.preventDefault()        
 
-  var parentNetwork = $('#parentNetwork').val()
-  var accountManager = $('#accountManager').val()
-  var contactName = $('#contactName').val()
-  var contactEmail = $('#contactEmail').val()
-  var currency = $('#currency').val()
-  var outStream = $('#outStream').val()
-  var mobileOutStream = $('#mobileOutStream').val()
-  
-  var inStream = $('#inStream').val()
-  var mobileInStream = $('#mobileInStream').val()
-  var inArticle = $('#inArticle').val()
-  var mobileInArticle = $('#mobileInArticle').val()
-  var verticalVideo = $('#verticalVideo').val()
-  var unmissable = $('#unmissable').val()
-  var gender = $('#gender').val()
-  
-  var vertical = $('#vertical').val()
-  var siteOrigin = $('#siteOrigin').val()
-  var language = $('#language').val()
-  var ampSite = $('#ampSite').val()
-  var headerBidding = $('#headerBidding').val()
-  var approval = $('#approval').val()
-  var whiteList = $('#whiteList').val()
-  
-  var newsCorp = $('#newsCorp').val()
-  var reachExtension = $('#reachExtension').val()
-  var newsCorpCampagin = $('#newsCorpCampagin').val()
-  var alcohol = $('#alcohol').val()
-  var gambling = $('#gambling').val()
-  var blacklist = $('#blacklist').val()
-  var brandSafety = $('#brandSafety').val()
-  
-  var groupM = $('#groupM').val()
-  var contents = $('#contents').val()
-  var notes = $('#notes').val()
-  var ranking = $('#ranking').val()
-  var comScore = $('#comScore').val()
-  var format = $('#format').val()
-  var adsTxt = $('#adsTxt').val()
-  
-  var exchanges = $('#exchanges').val()
-  var videoLength = $('#videoLength').val()
-  var audio = $('#audio').val()
-  var clickToPlay = $('#clickToPlay').val()
-  var skippability = $('#skippability').val()
-  var outOfView = $('#outOfView').val()
-  var player = $('#player').val()
+    var date = $('#date').val()
+    var status = $('#status').val()
+    var siteName = $('#siteName').val()
+    var SiteId = $('#siteId').val()
+    var SiteUUID = $('#siteUUID').val()
+    var SiteURL = $('#siteURL').val()
+    var SiteDesc = $('#siteDesc').val()
+    var parentNetwork = $('#parentNetwork').val()
+    var accountManager = $('#accountManager').val()
+    var contactName = $('#contactName').val()
+    var contactEmail = $('#contactEmail').val()
+    var currency = $('#currency').val()
+    var outStream = $('#outStream').val()
+    var mobileOutStream = $('#mobileOutStream').val()
+    var inStream = $('#inStream').val()
+    var mobileInStream = $('#mobileInStream').val()
+    var inArticle = $('#inArticle').val()
+    var mobileInArticle = $('#mobileInArticle').val()
+    var verticalVideo = $('#verticalVideo').val()
+    var unmissable = $('#unmissable').val()
+    var gender = $('#gender').val()
+    var vertical = $('#vertical').val()
+    var siteOrigin = $('#siteOrigin').val()
+    var language = $('#language').val()
+    var ampSite = $('#ampSite').val()
+    var headerBidding = $('#headerBidding').val()
+    var approval = $('#approval').val()
+    var whiteList = $('#whiteList').val()
+    var newsCorp = $('#newsCorp').val()
+    var reachExtension = $('#reachExtension').val()
+    var newsCorpCampagin = $('#newsCorpCampagin').val()
+    var alcohol = $('#alcohol').val()
+    var gambling = $('#gambling').val()
+    var blacklist = $('#blacklist').val()
+    var brandSafety = $('#brandSafety').val()
+    var groupM = $('#groupM').val()
+    var contents = $('#contents').val()
+    var notes = $('#notes').val()
+    var ranking = $('#ranking').val()
+    var comScore = $('#comScore').val()
+    var format = $('#format').val()
+    var adsTxt = $('#adsTxt').val()
+    var exchanges = $('#exchanges').val()
+    var videoLength = $('#videoLength').val()
+    var audio = $('#audio').val()
+    var clickToPlay = $('#clickToPlay').val()
+    var skippability = $('#skippability').val()
+    var outOfView = $('#outOfView').val()
+    var player = $('#player').val()
 
-  siteList.push({
-    date: date,
-    status: status,
-    siteName: siteName,
-    SiteId:SiteId,
-    SiteUUID:SiteUUID,
-    SiteURL:SiteURL,
-    SiteDesc:SiteDesc,
-   
-    parentNetwork: parentNetwork,
-    accountManager: accountManager,
-    contactName: contactName,
-    contactEmail:contactEmail,
-    currency:currency,
-    outStream:outStream,
-    mobileOutStream:mobileOutStream,
-    
-    inStream: inStream,
-    mobileInStream: mobileInStream,
-    inArticle: inArticle,
-    mobileInArticle:mobileInArticle,
-    verticalVideo:verticalVideo,
-    unmissable:unmissable,
-    gender:gender,
-    
-    vertical: vertical,
-    siteOrigin: siteOrigin,
-    language: language,
-    ampSite:ampSite,
-    headerBidding:headerBidding,
-    approval:approval,
-    whiteList:whiteList,
-    
-    newsCorp: newsCorp,
-    reachExtension: reachExtension,
-    newsCorpCampagin: newsCorpCampagin,
-    alcohol:alcohol,
-    gambling:gambling,
-    blacklist:blacklist,
-    brandSafety:brandSafety,
-    
-    groupM: groupM,
-    contents: contents,
-    notes: notes,
-    ranking:ranking,
-    comScore:comScore,
-    format:format,
-    adsTxt:adsTxt,
-    
-    exchanges: exchanges,
-    videoLength: videoLength,
-    audio: audio,
-    clickToPlay:clickToPlay,
-    skippability:skippability,
-    outOfView:outOfView,
-    player:player,
-
-    user: firebase.auth().currentUser.displayName,
-  })
-  /*not working, investigate
+    siteList.push({
+        date: date,
+        status: status,
+        siteName: siteName,
+        SiteId:SiteId,
+        SiteUUID:SiteUUID,
+        SiteURL:SiteURL,
+        SiteDesc:SiteDesc,
+        parentNetwork: parentNetwork,
+        accountManager: accountManager,
+        contactName: contactName,
+        contactEmail:contactEmail,
+        currency:currency,
+        outStream:outStream,
+        mobileOutStream:mobileOutStream,
+        inStream: inStream,
+        mobileInStream: mobileInStream,
+        inArticle: inArticle,
+        mobileInArticle:mobileInArticle,
+        verticalVideo:verticalVideo,
+        unmissable:unmissable,
+        gender:gender,
+        vertical: vertical,
+        siteOrigin: siteOrigin,
+        language: language,
+        ampSite:ampSite,
+        headerBidding:headerBidding,
+        approval:approval,
+        whiteList:whiteList,
+        newsCorp: newsCorp,
+        reachExtension: reachExtension,
+        newsCorpCampagin: newsCorpCampagin,
+        alcohol:alcohol,
+        gambling:gambling,
+        blacklist:blacklist,
+        brandSafety:brandSafety,
+        groupM: groupM,
+        contents: contents,
+        notes: notes,
+        ranking:ranking,
+        comScore:comScore,
+        format:format,
+        adsTxt:adsTxt,
+        exchanges: exchanges,
+        videoLength: videoLength,
+        audio: audio,
+        clickToPlay:clickToPlay,
+        skippability:skippability,
+        outOfView:outOfView,
+        player:player,
+        user: firebase.auth().currentUser.displayName,
+    })
+    /*not working, investigate
     $('#siteName').val('')
     $('#date').val('')
     $('#status').val('')
@@ -204,12 +199,11 @@ $('#NewPub').click(function (event){
 
 })
 
-//fetching data from firebase and adding to a table once added to create new sites
+//fetching data from firebase and adding to a table once data has been added to CreateNewSite.html
 var database = firebase.database().ref().child('sites');
 database.once('value', function(snapshot){
     if(snapshot.exists()){
         var content = '';
-
         snapshot.forEach(function(data){
             var date=data.val().date;
             var status=data.val().status;
@@ -263,7 +257,6 @@ database.once('value', function(snapshot){
             var user=data.val().user;
 
             content += '<tr>';
-
             content += '<td>' + date + '</td>';
             content += '<td>' + status  + '</td>';
             content += '<td>' + siteName  + '</td>';
@@ -314,7 +307,6 @@ database.once('value', function(snapshot){
             content += '<td>' + outOfView + '</td>';
             content += '<td>' + player + '</td>';
             content += '<td>' + user + '</td>';
-
             content += '</tr>';
         });
 
@@ -323,12 +315,11 @@ database.once('value', function(snapshot){
 });
 
 
-//append data from firebase script editor to table
+//append data from firebase script editor to the table
 var database = firebase.database().ref();
 database.once('value', function(snapshot){
     if(snapshot.exists()){
         var content = '';
-
         snapshot.forEach(function(data){
             var date=data.val().date;
             var status=data.val().status;
@@ -380,10 +371,7 @@ database.once('value', function(snapshot){
             var outOfView=data.val().outOfView;
             var player=data.val().player;
             var user=data.val().user;
-
-            
             content += '<tr>';
-
             content += '<td>' + date + '</td>';
             content += '<td>' + status  + '</td>';
             content += '<td>' + siteName  + '</td>';
@@ -434,16 +422,11 @@ database.once('value', function(snapshot){
             content += '<td>' + outOfView + '</td>';
             content += '<td>' + player + '</td>';
             content += '<td>' + user + '</td>';
-
-
             content += '</tr>';
         });
-
         $('#table').append(content);
     }
 });
-
-
 
 
 
