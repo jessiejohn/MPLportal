@@ -427,7 +427,36 @@ database.once('value', function(snapshot){
         $('#table').append(content);
     }
 });
+//-----------------------------------------------https://www.youtube.com/watch?v=CVWtdp08B9g----------------------------------------
 
+function readAllData() {
+            var ref = firebase.database().ref().child("sites");
 
+            ref.on("value", function (snapshot) {
+                snapshot.forEach(function (childSnapshot) {
+                    // key will be "ada" the first time and "alan" the second time
+                    var key = childSnapshot.key;
+                    // childData will be the actual contents of the child
+                    var childData = childSnapshot.val();
+                    var tr = '<tr>' +
+                                '<td>' + key + '</td>' +
+                                '<td>' + childData.SiteId + '</td>' +
+                                '<td>' + childData.SiteDesc + '</td>' +
+                                '<td>' + childData.SiteUUID + '</td>' +
+
+                            '</tr>';
+                    $('#lstTable').append(tr);
+                    console.log(snapshot.val());
+                });
+            }, function (error) {
+                console.log("Error: " + error.code);
+            });
+        }
+
+$('#btnReadAll').on('click', function () {
+            readAllData();
+        });
+
+//------------------------------------------------------------------
 
 
