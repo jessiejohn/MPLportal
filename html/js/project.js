@@ -37,8 +37,10 @@ var mainApp = {};
 
 //creating new database from CreateNewSite.html tab entries
 
-var mplPortal = firebase.database()
-var siteList = mplPortal.ref('sites')
+//var mplPortal = firebase.database()
+//var siteList = mplPortal.ref('sites')
+
+var siteList = firebase.database().ref('sites')
 
 $('#NewPub').click (function (event){
     event.preventDefault()        
@@ -145,7 +147,7 @@ $('#NewPub').click (function (event){
         player:player,
         user: firebase.auth().currentUser.displayName,
     })
-    /*not working, investigate
+    /* meant to make the input tab blank again, not working, investigate
     $('#siteName').val('')
     $('#date').val('')
     $('#status').val('')
@@ -196,7 +198,6 @@ $('#NewPub').click (function (event){
     $('#skippability').val('')
     $('#outOfView').val('')
     $('#player').val('')*/
-
 })
 
 //fetching data from firebase and adding to a table once data has been added to CreateNewSite.html
@@ -427,36 +428,26 @@ database.once('value', function(snapshot){
         $('#table').append(content);
     }
 });
-//-----------------------------------------------https://www.youtube.com/watch?v=CVWtdp08B9g----------------------------------------
 
-function readAllData() {
-            var ref = firebase.database().ref().child("sites");
+// in the below example -LRPu29BJqdfQb6fUewR had to be defined to make a change to it. How can we do this without defining it with fixed value?
 
-            ref.on("value", function (snapshot) {
-                snapshot.forEach(function (childSnapshot) {
-                    // key will be "ada" the first time and "alan" the second time
-                    var key = childSnapshot.key;
-                    // childData will be the actual contents of the child
-                    var childData = childSnapshot.val();
-                    var tr = '<tr>' +
-                                '<td>' + key + '</td>' +
-                                '<td>' + childData.SiteId + '</td>' +
-                                '<td>' + childData.SiteDesc + '</td>' +
-                                '<td>' + childData.SiteUUID + '</td>' +
+function update_user(){
 
-                            '</tr>';
-                    $('#lstTable').append(tr);
-                    console.log(snapshot.val());
-                });
-            }, function (error) {
-                console.log("Error: " + error.code);
-            });
-        }
+var update = firebase.database().ref("sites/-LRQHUajeF-B0t8cv1uq");
 
-$('#btnReadAll').on('click', function () {
-            readAllData();
+update.update ({
+   "SiteUUID": $('#user_id').val()
+});
+
+}
+
+$('#update').click(update_user);
+
+//the below gives the key i..e -LRQHUajeF-B0t8cv1uq" how can we combine this with the above script to get the key and modify it exactly
+var ref = firebase.database().ref().child("sites");
+
+    ref.on("value", function (snapshot) {
+    snapshot.forEach(function (childSnapshot) {
+        var key = childSnapshot.key;
         });
-
-//------------------------------------------------------------------
-
-
+    })

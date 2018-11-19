@@ -11,7 +11,6 @@
   <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
 
-
   <!-- bootstrap-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -26,12 +25,9 @@
   <link href="html/CreateNewSite.html" rel="html">
   <link href="project.css" rel="stylesheet">
   
-
   <title>Homepage</title>
 
-
 </head>
-
 
 <body>
 
@@ -47,7 +43,6 @@
         <li class="nav-item">
             <a class="nav-link" href="CreateNewSite.html"> Create New Site</a>
         </li>
-
 
         <li class="nav-item">
             <a class="nav-link" href="https://console.unrulymedia.com/admin/generic_reporting/star?row_UnrulyViews=on&metrics=row_UnrulyViews&requestNoPadding=noPad&breakdown1=event_date" target="_blank"> TLR</a>
@@ -66,134 +61,119 @@
             </div>
         </li> -->
       </ul>        
-
       <button onclick="mainApp.logOut()" id="button">logout </button>
-
   </nav>
 
- <!--<div class = "container-fluid" id = "index">
+  <table id="table" class="table table-striped table-bordered table-hover"> 
+    <tr> 
+      <th scope="col"> Date </th>
+      <th scope="col"> Status</th>
+      <th scope="col"> Site Name</th>
+      <th scope="col"> Site Id</th>
+      <th scope="col"> Site UUID</th>
+      <th scope="col"> Site URL</th>
+      <th scope="col"> Site Description</th>
+      <th scope="col"> Parent Network</th>
+      <th scope="col"> Account Manager</th>  
+      <th scope="col"> Contact Name</th>
+      <th scope="col"> Contact Email</th>
+      <th scope="col"> Currency</th>
+      <th scope="col"> [CPM] UnrulyX Out-Stream</th>
+      <th scope="col"> [CPM] UnrulyX Mobile Out-Stream</th>
+      <th scope="col"> [CPM] UnrulyX In-Stream </th>
+      <th scope="col"> [CPM] UnrulyX Mobile In-Stream </th>
+      <th scope="col"> [CPM] In-Article (direct) </th>
+      <th scope="col"> [CPM] In-Article Mobile (direct)</th>
+      <th scope="col"> [CPM] Vertical Video (direct) </th>
+      <th scope="col"> [CPM] Unmissable (direct) </th>
+      <th scope="col"> Gender</th>
+      <th scope="col"> Vertical</th>
+      <th scope="col"> Site Origin</th>
+      <th scope="col"> Site language </th>
+      <th scope="col"> Amp Site?</th>
+      <th scope="col"> Header Bidding site?</th>
+      <th scope="col"> Requires Approval? </th>
+      <th scope="col"> White listed for RTB? </th>
+      <th scope="col"> News Corp Site?</th>
+      <th scope="col"> Accepts News audience reach extension campaigns?</th>
+      <th scope="col"> Accepts campaigns advertising News Corp Titles?</th>
+      <th scope="col"> Accepts Alcohol Campaigns?</th>
+      <th scope="col"> Accepts Gambling Campaigns? </th>
+      <th scope="col"> Vertical / Brand Blacklist</th>
+      <th scope="col">Brand Safety Measures</th>
+      <th scope="col">Group M Approved?</th>
+      <th scope="col">Site vetted for content?</th>
+      <th scope="col">Additional Notes</th>
+      <th scope="col">Ranking System?</th>
+      <th scope="col">ComScore Rank</th>
+      <th scope="col">Formats Accepted</th>
+      <th scope="col">Ads.txt listing completed?</th>
+      <th scope="col">Exchanges available via?</th>
+      <th scope="col">[In-Stream] max. video length (in seconds)</th>
+      <th scope="col">[In-Stream] default audio</th>
+      <th scope="col">[In-Stream] click to play?</th>
+      <th scope="col">[In-Stream] default skippability</th>
+      <th scope="col">[In-Stream] Out-Of-View behavior</th>
+      <th scope="col">[In-Stream] Video Player</th> 
+      <th scope="col">User</th>     
+    </tr>
+    
+    <tr>
+      <td id = "date"> </td>
+      <td id = "status"></td>
+      <td id = "siteName"></td>
+      <td id = "SiteId"></td>
+      <td id = "SiteUUID"></td>
+      <td id = "SiteURL"></td>
+      <td id = "SiteDesc"></td>
+      <td id = "parentNetwork"></td>
+      <td id = "accountManager"></td>
+      <td id = "contactName"></td>
+      <td id = "contactEmail"></td>
+      <td id = "currency"></td>
+      <td id = "outStream"></td>
+      <td id = "mobileOutStream"></td>
+      <td id = "inStream"></td>
+      <td id = "mobileInStream"></td>
+      <td id = "inArticle"></td>
+      <td id = "mobileInArticle"></td>
+      <td id = "verticalVideo"></td>
+      <td id = "unmissable"></td>
+      <td id = "gender"></td>
+      <td id = "vertical"></td>
+      <td id = "siteOrigin"></td>
+      <td id = "language"></td>
+      <td id = "ampSite"></td>
+      <td id = "headerBidding"></td>
+      <td id = "approval"></td>
+      <td id = "whiteList"></td>
+      <td id = "newsCorp"></td>
+      <td id = "reachExtension"></td>
+      <td id = "newsCorpCampagin"></td>
+      <td id = "alcohol"></td>
+      <td id = "gambling"></td>
+      <td id = "blacklist"></td>
+      <td id = "brandSafety"></td>
+      <td id = "groupM"></td>
+      <td id = "contents"></td>
+      <td id = "notes"></td>
+      <td id = "ranking"></td>
+      <td id = "comScore"></td>
+      <td id = "format"></td>
+      <td id = "adsTxt"></td>
+      <td id = "exchanges"></td>
+      <td id = "videoLength"></td>
+      <td id = "audio"></td>
+      <td id = "clickToPlay"></td>
+      <td id = "skippability"></td>
+      <td id = "outOfView"></td>
+      <td id = "player"></td>
+      <td id = "user"></td>
+    </tr>
+  </table>
 
-        Firebase. List all sites
-
-  <ul> </ul>-->
-
-
-
-
-    <table id="table" class="table table-striped table-bordered table-hover"> 
-        <tr> 
-          <th scope="col"> Date </th>
-          <th scope="col"> Status</th>
-          <th scope="col"> Site Name</th>
-          <th scope="col"> Site Id</th>
-          <th scope="col"> Site UUID</th>
-          <th scope="col"> Site URL</th>
-          <th scope="col"> Site Description</th>
-          <th scope="col"> Parent Network</th>
-          <th scope="col"> Account Manager</th>  
-          <th scope="col"> Contact Name</th>
-          <th scope="col"> Contact Email</th>
-          <th scope="col"> Currency</th>
-          <th scope="col"> [CPM] UnrulyX Out-Stream</th>
-          <th scope="col"> [CPM] UnrulyX Mobile Out-Stream</th>
-          <th scope="col"> [CPM] UnrulyX In-Stream </th>
-          <th scope="col"> [CPM] UnrulyX Mobile In-Stream </th>
-          <th scope="col"> [CPM] In-Article (direct) </th>
-          <th scope="col"> [CPM] In-Article Mobile (direct)</th>
-          <th scope="col"> [CPM] Vertical Video (direct) </th>
-          <th scope="col"> [CPM] Unmissable (direct) </th>
-          <th scope="col"> Gender</th>
-          <th scope="col"> Vertical</th>
-          <th scope="col"> Site Origin</th>
-          <th scope="col"> Site language </th>
-          <th scope="col"> Amp Site?</th>
-          <th scope="col"> Header Bidding site?</th>
-          <th scope="col"> Requires Approval? </th>
-          <th scope="col"> White listed for RTB? </th>
-          <th scope="col"> News Corp Site?</th>
-          <th scope="col"> Accepts News audience reach extension campaigns?</th>
-          <th scope="col"> Accepts campaigns advertising News Corp Titles?</th>
-          <th scope="col"> Accepts Alcohol Campaigns?</th>
-          <th scope="col"> Accepts Gambling Campaigns? </th>
-          <th scope="col"> Vertical / Brand Blacklist</th>
-          <th scope="col">Brand Safety Measures</th>
-          <th scope="col">Group M Approved?</th>
-          <th scope="col">Site vetted for content?</th>
-          <th scope="col">Additional Notes</th>
-          <th scope="col">Ranking System?</th>
-          <th scope="col">ComScore Rank</th>
-          <th scope="col">Formats Accepted</th>
-          <th scope="col">Ads.txt listing completed?</th>
-          <th scope="col">Exchanges available via?</th>
-          <th scope="col">[In-Stream] max. video length (in seconds)</th>
-          <th scope="col">[In-Stream] default audio</th>
-          <th scope="col">[In-Stream] click to play?</th>
-          <th scope="col">[In-Stream] default skippability</th>
-          <th scope="col">[In-Stream] Out-Of-View behavior</th>
-          <th scope="col">[In-Stream] Video Player</th> 
-          <th scope="col">User</th>     
-        </tr>
-
-        <tr>
-          <td id = "date"></td>
-          <td id = "status"></td>
-          <td id = "siteName"></td>
-          <td id = "SiteId"></td>
-          <td id = "SiteUUID"></td>
-          <td id = "SiteURL"></td>
-          <td id = "SiteDesc"></td>
-          <td id = "parentNetwork"></td>
-          <td id = "accountManager"></td>
-          <td id = "contactName"></td>
-          <td id = "contactEmail"></td>
-          <td id = "currency"></td>
-          <td id = "outStream"></td>
-          <td id = "mobileOutStream"></td>
-          <td id = "inStream"></td>
-          <td id = "mobileInStream"></td>
-          <td id = "inArticle"></td>
-          <td id = "mobileInArticle"></td>
-          <td id = "verticalVideo"></td>
-          <td id = "unmissable"></td>
-          <td id = "gender"></td>
-          <td id = "vertical"></td>
-          <td id = "siteOrigin"></td>
-          <td id = "language"></td>
-          <td id = "ampSite"></td>
-          <td id = "headerBidding"></td>
-          <td id = "approval"></td>
-          <td id = "whiteList"></td>
-          <td id = "newsCorp"></td>
-          <td id = "reachExtension"></td>
-          <td id = "newsCorpCampagin"></td>
-          <td id = "alcohol"></td>
-          <td id = "gambling"></td>
-          <td id = "blacklist"></td>
-          <td id = "brandSafety"></td>
-          <td id = "groupM"></td>
-          <td id = "contents"></td>
-          <td id = "notes"></td>
-          <td id = "ranking"></td>
-          <td id = "comScore"></td>
-          <td id = "format"></td>
-          <td id = "adsTxt"></td>
-          <td id = "exchanges"></td>
-          <td id = "videoLength"></td>
-          <td id = "audio"></td>
-          <td id = "clickToPlay"></td>
-          <td id = "skippability"></td>
-          <td id = "outOfView"></td>
-          <td id = "player"></td>
-          <td id = "user"></td>
-
-        </tr>
-      
-</table>
-
-
-
-<script src="js/key.js"></script>
-<script src="js/project.js"></script>
+  <script src="js/key.js"></script>
+  <script src="js/project.js"></script>
 
 </body>
 
