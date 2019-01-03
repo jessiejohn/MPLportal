@@ -432,16 +432,59 @@ database.once('value', function(snapshot){
 // in the below example -LRPu29BJqdfQb6fUewR had to be defined to make a change to it. How can we do this without defining it with fixed value?
 
 function update_user(){
-
-var update = firebase.database().ref("sites/-LRQHUajeF-B0t8cv1uq");
-
+var update = firebase.database().ref("sites/child");
 update.update ({
-   "SiteUUID": $('#user_id').val()
+    "siteName": $('#editsiteName').val(),
+    "SiteId": $('#editsiteId').val(),
+    "SiteUUID": $('#editsiteUUID').val(),
+    " SiteURL": $('#editsiteURL').val(),
+    "SiteDesc": $('#editsiteDesc').val(),
+    "parentNetwork": $('#editparentNetwork').val(),
+    "accountManager": $('#editaccountManager').val(),
+    "contactName": $('#editcontactName').val(),
+    "contactEmail": $('#editcontactEmail').val(),
+    "currency": $('#editcurrency').val(),
+    "outStream": $('#editoutStream').val(),
+    "mobileOutStream": $('#editmobileOutStream').val(),
+    "inStream": $('#editinStream').val(),
+    "mobileInStream": $('#editmobileInStream').val(),
+    "inArticle": $('#editinArticle').val(),
+    "mobileInArticle": $('#editmobileInArticle').val(),
+    "verticalVideo": $('#editverticalVideo').val(),
+    "unmissable": $('#editunmissable').val(),
+    "gender": $('#editgender').val(),
+    "vertical": $('#editvertical').val(),
+    "siteOrigin": $('#editsiteOrigin').val(),
+    "language": $('#editlanguage').val(),
+    "ampSite": $('#editampSite').val(),
+    "headerBidding": $('#editheaderBidding').val(),
+    "approval": $('#editapproval').val(),
+    "whiteList": $('#editwhiteList').val(),
+    "newsCorp": $('#editnewsCorp').val(),
+    "reachExtension": $('#editreachExtension').val(),
+    "newsCorpCampagin": $('#editnewsCorpCampagin').val(),
+    "alcohol": $('#editalcohol').val(),
+    "gambling": $('#editgambling').val(),
+    "blacklist": $('#editblacklist').val(),
+    "brandSafety": $('#editbrandSafety').val(),
+    "groupM": $('#editgroupM').val(),
+    "contents": $('#editcontents').val(),
+    "notes": $('#editnotes').val(),
+    "ranking": $('#editranking').val(),
+    "comScore": $('#editcomScore').val(),
+    "format": $('#editformat').val(),
+    "adsTxt": $('#editadsTxt').val(),
+    "exchanges": $('#editexchanges').val(),
+    "videoLength": $('#editvideoLength').val(),
+    "audio": $('#editaudio').val(),
+    "clickToPlay": $('#editclickToPlay').val(),
+    "skippability": $('#editskippability').val(),
+    "outOfView": $('#editoutOfView').val(),
+    "player": $('#editplayer').val(),
 });
-
 }
 
-$('#update').click(update_user);
+$('#edited').click(update_user);
 
 //the below gives the key i..e -LRQHUajeF-B0t8cv1uq" how can we combine this with the above script to get the key and modify it exactly
 var ref = firebase.database().ref().child("sites");
